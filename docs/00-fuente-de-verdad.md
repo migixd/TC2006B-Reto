@@ -8,6 +8,7 @@
 - Maximo simultaneo: 330 participantes.
 - Bloque asignado: `172.23.24.0/21`.
 - DNS interno y servidor DHCP: `172.23.26.162`.
+- Edificios fisicos: CIT, Edificio de Negocios y Edificio de Ingenieria.
 
 ## Participantes
 
@@ -40,6 +41,7 @@ La sustitucion es solo para simulacion y no modifica la propuesta economica.
 
 - Migrar del esquema heredado `172.16.x.x` al bloque oficial `172.23.24.0/21`.
 - Confirmar que todas las interfaces del `.pkt` tengan nombre, IP y estado.
+- Redistribuir los equipos heredados entre edificios, pisos y Wiring Closets
+  sin romper la conectividad validada.
 - Capturar imagenes finales del modo Physical y del modo Logical.
 - Incorporar evidencia documental del trabajo colaborativo.
-
