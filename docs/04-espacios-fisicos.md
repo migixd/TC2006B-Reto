@@ -35,9 +35,9 @@ no cada salon individual.
 | --- | --- | --- | --- |
 | CIT | `Wiring Closet CIT-P1` | `Rack CIT-P1.1` | Primer piso y Salon 7101 |
 | CIT | `Wiring Closet CIT-P3` | `Rack CIT-P3.1` | Sala de Congresos |
-| Edificio de Negocios | `Wiring Closet ENEG-P1` | `Rack ENEG-P1.1` | Sala Borrego, Sala Consejo y Domo |
-| Edificio de Negocios | `Wiring Closet ENEG-P2` | `Rack ENEG-P2.1` | Aulas 1223, 1224 y Laboratorio de Finanzas |
-| Edificio de Ingenieria | `Wiring Closet EING-P1` | `Rack EING-P1.1` | Laboratorio de IA y Aula 12102 |
+| Edificio de Negocios | `Wiring Closet ENH-P1` | `Rack ENH-P1.1` | Sala Borrego, Sala Consejo y Domo |
+| Edificio de Negocios | `Wiring Closet ENH-P2` | `Rack ENH-P2.1` | Aulas 1223, 1224 y Laboratorio de Finanzas |
+| Edificio de Ingenieria | `Wiring Closet EIC-P1` | `Rack EIC-P1.1` | Laboratorio de IA y Aula 12102 |
 
 El nucleo, routers de frontera, DHCP y distribucion principal se conservaran
 temporalmente en `Wiring Closet CIT-P1` hasta validar la ubicacion final.
@@ -47,9 +47,9 @@ temporalmente en `Wiring Closet CIT-P1` hasta validar la ubicacion final.
 | Elemento | Patron | Ejemplo |
 | --- | --- | --- |
 | Patch panel | `<EDIFICIO>-P<PISO>-PP-<NN>` | `CIT-P3-PP-01` |
-| Telecommunications Outlet | `<EDIFICIO>-<ESPACIO>-TO-<NN>` | `ENEG-DOMO-TO-01` |
-| Switch | `SW-<EDIFICIO>-P<PISO>-ACC-<NN>` | `SW-EING-P1-ACC-01` |
-| Enlace troncal | `TRK-<ORIGEN>-<DESTINO>` | `TRK-CIT-EING` |
+| Telecommunications Outlet | `<EDIFICIO>-<ESPACIO>-TO-<NN>` | `ENH-DOMO-TO-01` |
+| Switch | `SW-<EDIFICIO>-P<PISO>-ACC-<NN>` | `SW-EIC-P1-ACC-01` |
+| Enlace troncal | `TRK-<ORIGEN>-<DESTINO>` | `TRK-CIT-EIC` |
 
 ## Reglas de acomodo
 

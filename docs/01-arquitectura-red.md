@@ -22,8 +22,8 @@ flowchart LR
   Internet --> Frontera["Router de frontera / NAT"]
   Frontera --> Core["Distribucion OMI"]
   Core --> CIT["Acceso CIT"]
-  Core --> ENEG["Acceso ENEG"]
-  Core --> EING["Acceso EING"]
+  Core --> ENH["Acceso ENH"]
+  Core --> EIC["Acceso EIC"]
   Core --> Servidor["DHCP-DNS-OMI"]
 ```
 
