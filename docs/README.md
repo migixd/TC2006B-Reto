@@ -13,9 +13,11 @@ XXV Olimpiada Mexicana de Informatica.
 | `SDD-WORKFLOW.md` | Flujo para controlar cambios. |
 | `entregables/ActReto03-reporte.md` | Borrador formal para el PDF de entrega. |
 
+Los comandos listos para aplicar en el simulador viven en
+`../configuracion/packet-tracer/`.
+
 ## Estado
 
 El paquete documental esta preparado. La validacion final depende de abrir
 `ActReto03.pkt`, corregir el direccionamiento heredado y capturar imagenes del
 diseno fisico y logico.
-

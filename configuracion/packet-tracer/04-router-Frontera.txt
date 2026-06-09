@@ -1,0 +1,82 @@
+enable
+configure terminal
+hostname Frontera
+
+interface GigabitEthernet0/0
+ description TRANSITO A CONCURSANTES
+ ip address 172.23.26.170 255.255.255.252
+ ip nat inside
+ no shutdown
+
+interface GigabitEthernet0/1
+ description TRONCAL SEGMENTOS OMI
+ no ip address
+ no shutdown
+
+no interface GigabitEthernet0/1.10
+no interface GigabitEthernet0/1.20
+no interface GigabitEthernet0/1.30
+no interface GigabitEthernet0/1.40
+
+interface GigabitEthernet0/1.20
+ description JUECES
+ encapsulation dot1Q 20
+ ip address 172.23.26.1 255.255.255.224
+ ip helper-address 172.23.26.162
+ ip nat inside
+
+interface GigabitEthernet0/1.30
+ description ENTRENADORES
+ encapsulation dot1Q 30
+ ip address 172.23.26.33 255.255.255.224
+ ip helper-address 172.23.26.162
+ ip nat inside
+
+interface GigabitEthernet0/1.40
+ description PRENSA
+ encapsulation dot1Q 40
+ ip address 172.23.26.65 255.255.255.224
+ ip helper-address 172.23.26.162
+ ip nat inside
+
+interface GigabitEthernet0/1.50
+ description INVITADOS
+ encapsulation dot1Q 50
+ ip address 172.23.26.97 255.255.255.224
+ ip helper-address 172.23.26.162
+ ip nat inside
+
+interface GigabitEthernet0/1.60
+ description INFRAESTRUCTURA
+ encapsulation dot1Q 60
+ ip address 172.23.26.129 255.255.255.224
+ ip helper-address 172.23.26.162
+ ip nat inside
+
+interface GigabitEthernet0/1.70
+ description SERVIDORES
+ encapsulation dot1Q 70
+ ip address 172.23.26.161 255.255.255.248
+ ip nat inside
+
+interface GigabitEthernet0/2
+ description CAMPUS
+ ip address 10.32.100.100 255.255.255.0
+ ip nat outside
+ no shutdown
+
+no router eigrp 777
+router eigrp 777
+ network 172.23.24.0 0.0.7.255
+ no auto-summary
+
+no access-list 7
+access-list 7 permit 172.23.24.0 0.0.7.255
+no ip nat inside source list 7 interface GigabitEthernet0/2
+ip nat inside source list 7 interface GigabitEthernet0/2 overload
+
+ip route 0.0.0.0 0.0.0.0 10.32.100.1
+
+end
+write memory
+

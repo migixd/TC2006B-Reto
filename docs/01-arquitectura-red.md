@@ -4,13 +4,14 @@
 
 | VLAN | Segmento | Subred | Gateway propuesto | Hosts utiles |
 | ---: | --- | --- | --- | ---: |
-| 10 | Concursantes | `172.23.24.0/23` | `172.23.24.1` | 510 |
+| Acceso en router Alumnos | Concursantes | `172.23.24.0/23` | `172.23.24.1` | 510 |
 | 20 | Jueces | `172.23.26.0/27` | `172.23.26.1` | 30 |
 | 30 | Entrenadores | `172.23.26.32/27` | `172.23.26.33` | 30 |
 | 40 | Prensa | `172.23.26.64/27` | `172.23.26.65` | 30 |
 | 50 | Invitados | `172.23.26.96/27` | `172.23.26.97` | 30 |
 | 60 | Infraestructura | `172.23.26.128/27` | `172.23.26.129` | 30 |
 | 70 | Servidores | `172.23.26.160/29` | `172.23.26.161` | 6 |
+| No aplica | Transito Alumnos-Frontera | `172.23.26.168/30` | No aplica | 2 |
 
 Servidor `DHCP-DNS-OMI`: `172.23.26.162/29`.
 
@@ -40,6 +41,6 @@ flowchart LR
 ## Nota de implementacion
 
 El script anterior define VLAN 10 a 40 con nombres distintos y direcciones
-`172.16.x.x`. No debe reutilizarse sin adaptar nombres, VLAN, pools DHCP,
-subinterfaces, rutas, NAT y listas de acceso a esta arquitectura.
-
+`172.16.x.x`. La configuracion corregida vive en
+`configuracion/packet-tracer/` y adapta nombres, VLAN, pools DHCP,
+subinterfaces, rutas y NAT a esta arquitectura.

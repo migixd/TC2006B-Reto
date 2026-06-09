@@ -1,0 +1,49 @@
+enable
+configure terminal
+hostname SWDistribucionExternos
+
+vlan 20
+ name JUECES
+vlan 30
+ name ENTRENADORES
+vlan 40
+ name PRENSA
+vlan 50
+ name INVITADOS
+vlan 60
+ name INFRAESTRUCTURA
+vlan 70
+ name SERVIDORES
+
+interface range FastEthernet0/1 - 2
+ switchport mode access
+ switchport access vlan 40
+ spanning-tree portfast
+
+interface range FastEthernet0/10 - 11
+ switchport mode access
+ switchport access vlan 30
+ spanning-tree portfast
+
+interface FastEthernet0/15
+ switchport mode access
+ switchport access vlan 20
+ spanning-tree portfast
+
+interface FastEthernet0/20
+ switchport mode access
+ switchport access vlan 50
+ spanning-tree portfast
+
+interface FastEthernet0/24
+ switchport mode access
+ switchport access vlan 70
+ spanning-tree portfast
+
+interface GigabitEthernet0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 20,30,40,50,60,70
+
+end
+write memory
+
