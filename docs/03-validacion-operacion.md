@@ -29,6 +29,6 @@
 
 ## Hallazgo actual
 
-La configuracion heredada usa `172.16.x.x`, por lo que V02 no esta aprobada.
-El `.pkt` incluido es una copia de trabajo y requiere validacion manual.
-
+La redistribucion fisica y la conectividad heredada fueron validadas, pero la
+configuracion aun usa `172.16.x.x`; por ello V02 no esta aprobada. Tambien falta
+aplicar y validar las politicas de aislamiento despues de la migracion IP.

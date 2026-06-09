@@ -33,11 +33,11 @@ no cada salon individual.
 
 | Edificio | Wiring Closet | Rack | Espacios atendidos |
 | --- | --- | --- | --- |
-| CIT | `Wiring Closet CIT-P1` | `Rack CIT-P1.1` | Primer piso y Salon 7101 |
-| CIT | `Wiring Closet CIT-P3` | `Rack CIT-P3.1` | Sala de Congresos |
-| Edificio de Negocios | `Wiring Closet ENH-P1` | `Rack ENH-P1.1` | Sala Borrego, Sala Consejo y Domo |
-| Edificio de Negocios | `Wiring Closet ENH-P2` | `Rack ENH-P2.1` | Aulas 1223, 1224 y Laboratorio de Finanzas |
-| Edificio de Ingenieria | `Wiring Closet EIC-P1` | `Rack EIC-P1.1` | Laboratorio de IA y Aula 12102 |
+| CIT | `Wiring Closet CIT-MDF-P1` | `Rack CIT-MDF-P1.1` | Nucleo, primer piso y Salon 7101 |
+| CIT | `Wiring Closet CIT-IDF-P3` | `Rack CIT-IDF-P3.1` | Sala de Congresos |
+| Edificio de Negocios | `Wiring Closet ENH-MDF-P1` | `Rack ENH-MDF-P1.1` | Sala Borrego, Sala Consejo y Domo |
+| Edificio de Negocios | `Wiring Closet ENH-IDF-P2` | `Rack ENH-IDF-P2.1` | Aulas 1223, 1224 y Laboratorio de Finanzas |
+| Edificio de Ingenieria | `Wiring Closet EIC-MDF-P1` | `Rack EIC-MDF-P1.1` | Laboratorio de IA y Aula 12102 |
 
 El nucleo, routers de frontera, DHCP y distribucion principal se conservaran
 temporalmente en `Wiring Closet CIT-P1` hasta validar la ubicacion final.
@@ -61,9 +61,15 @@ temporalmente en `Wiring Closet CIT-P1` hasta validar la ubicacion final.
 - Mover y renombrar un grupo de dispositivos a la vez, guardando y validando
   conectividad despues de cada movimiento.
 
-## Distribucion pendiente
+## Distribucion de switches de examen
 
-Los switches heredados (`SWAlumnos DOMO`, `SWAlumnos Menlo`, `SWAlumnos EIC` y
-`SWAlumnos Prepa`) deben reasignarse y renombrarse de acuerdo con los espacios
-anteriores. La asignacion exacta se confirmara antes de moverlos para no romper
-la topologia funcional.
+| Closet | Switches |
+| --- | --- |
+| `CIT-IDF-P3` | `SW-CIT-P3-CONG-01` a `SW-CIT-P3-CONG-05` |
+| `ENH-IDF-P2` | `SW-ENH-P2-1223`, `SW-ENH-P2-1224`, `SW-ENH-P2-FIN` |
+| `EIC-MDF-P1` | `SW-EIC-P1-12102` |
+| `CIT-MDF-P1` | `DIST-ALUMNOS` y dos switches de reserva |
+
+Las areas Sala Borrego, Sala Consejo, Laboratorio de IA y Salon 7101 pertenecen
+a las redes Invitados, Prensa, Jueces y Entrenadores respectivamente; no deben
+conectarse a `DIST-ALUMNOS`.

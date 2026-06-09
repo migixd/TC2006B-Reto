@@ -22,28 +22,23 @@ actual es `Switch`.
 
 Los puertos `Fa0/12-Fa0/24` y `Gi0/2` estan disponibles.
 
-## Asignacion final por espacio
+## Asignacion final validada
 
-La topologia dispone exactamente de once switches de acceso para once espacios.
-Se propone la siguiente reasignacion, conservando inicialmente los puertos
-actuales:
+| Puerto DIST-ALUMNOS | Hostname final | Ubicacion |
+| --- | --- | --- |
+| `Fa0/1` | `SW-CIT-P3-CONG-04` | Sala de Congresos |
+| `Fa0/2` | `SW-CIT-P3-CONG-05` | Sala de Congresos |
+| `Fa0/3` | `SW-ALUMNOS-RESERVA-01` | CIT-MDF-P1 |
+| `Fa0/4` | `SW-CIT-P3-CONG-03` | Sala de Congresos |
+| `Fa0/5` | `SW-CIT-P3-CONG-01` | Sala de Congresos |
+| `Fa0/6` | `SW-CIT-P3-CONG-02` | Sala de Congresos |
+| `Fa0/7` | `SW-ALUMNOS-RESERVA-02` | CIT-MDF-P1 |
+| `Fa0/8` | `SW-ENH-P2-1223` | Aula 1223 |
+| `Fa0/9` | `SW-ENH-P2-1224` | Aula 1224 |
+| `Fa0/10` | `SW-EIC-P1-12102` | Aula 12102 |
+| `Fa0/11` | `SW-ENH-P2-FIN` | Laboratorio de Finanzas |
 
-| Puerto DIST-ALUMNOS | Switch actual | Ubicacion final | Hostname final |
-| --- | --- | --- | --- |
-| `Fa0/1` | `SW-EIC-01` | EIC-P1, Laboratorio de IA | `SW-EIC-P1-IA` |
-| `Fa0/2` | `SW-DOMO-01` | ENH-P1, Domo de Negocios | `SW-ENH-P1-DOMO` |
-| `Fa0/3` | `SW-DOMO-02` | ENH-P1, Sala Borrego | `SW-ENH-P1-BORREGO` |
-| `Fa0/4` | `SW-PREPA-01` | CIT-P1, Salon 7101 | `SW-CIT-P1-7101` |
-| `Fa0/5` | `SW-MENLO-01` | CIT-P3, Sala de Congresos 1 | `SW-CIT-P3-CONG-01` |
-| `Fa0/6` | `SW-MENLO-02` | CIT-P3, Sala de Congresos 2 | `SW-CIT-P3-CONG-02` |
-| `Fa0/7` | `SW-MENLO-03` | ENH-P1, Sala Consejo | `SW-ENH-P1-CONSEJO` |
-| `Fa0/8` | `SW-MENLO-04` | ENH-P2, Aula 1223 | `SW-ENH-P2-1223` |
-| `Fa0/9` | `SW-MENLO-05` | ENH-P2, Aula 1224 | `SW-ENH-P2-1224` |
-| `Fa0/10` | `SW-PREPA-02` | EIC-P1, Aula 12102 | `SW-EIC-P1-12102` |
-| `Fa0/11` | `SW-MENLO-06` | ENH-P2, Laboratorio de Finanzas | `SW-ENH-P2-FIN` |
-
-Se asignan dos switches a Sala de Congresos porque es el espacio de mayor
-capacidad. Los demas espacios reciben un switch de acceso.
+Todos estos enlaces llegan al puerto `Fa0/24` del switch de acceso.
 
 ## Hallazgo
 

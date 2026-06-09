@@ -19,30 +19,30 @@ no interface GigabitEthernet0/1.30
 no interface GigabitEthernet0/1.40
 
 interface GigabitEthernet0/1.20
- description JUECES
- encapsulation dot1Q 20
- ip address 172.23.26.1 255.255.255.224
- ip helper-address 172.23.26.162
- ip nat inside
-
-interface GigabitEthernet0/1.30
  description ENTRENADORES
- encapsulation dot1Q 30
+ encapsulation dot1Q 20
  ip address 172.23.26.33 255.255.255.224
  ip helper-address 172.23.26.162
  ip nat inside
 
-interface GigabitEthernet0/1.40
+interface GigabitEthernet0/1.30
  description PRENSA
- encapsulation dot1Q 40
+ encapsulation dot1Q 30
  ip address 172.23.26.65 255.255.255.224
  ip helper-address 172.23.26.162
  ip nat inside
 
-interface GigabitEthernet0/1.50
+interface GigabitEthernet0/1.40
  description INVITADOS
- encapsulation dot1Q 50
+ encapsulation dot1Q 40
  ip address 172.23.26.97 255.255.255.224
+ ip helper-address 172.23.26.162
+ ip nat inside
+
+interface GigabitEthernet0/1.10
+ description JUECES
+ encapsulation dot1Q 10
+ ip address 172.23.26.1 255.255.255.224
  ip helper-address 172.23.26.162
  ip nat inside
 
@@ -79,4 +79,3 @@ ip route 0.0.0.0 0.0.0.0 10.32.100.1
 
 end
 write memory
-

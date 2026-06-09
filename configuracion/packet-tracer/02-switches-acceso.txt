@@ -1,16 +1,16 @@
 ! Aplicar este bloque en el switch Jueces
 enable
 configure terminal
-hostname Jueces
-vlan 20
+hostname SW-EIC-P1-JUECES
+vlan 10
  name JUECES
 interface range FastEthernet0/1 - 24
  switchport mode access
- switchport access vlan 20
+ switchport access vlan 10
  spanning-tree portfast
 interface range GigabitEthernet0/1 - 2
  switchport mode access
- switchport access vlan 20
+ switchport access vlan 10
  spanning-tree portfast
 end
 write memory
@@ -18,16 +18,16 @@ write memory
 ! Aplicar este bloque por separado en el switch Entrenadores
 enable
 configure terminal
-hostname Entrenadores
-vlan 30
+hostname SW-CIT-P1-ENTRENADORES
+vlan 20
  name ENTRENADORES
 interface range FastEthernet0/1 - 24
  switchport mode access
- switchport access vlan 30
+ switchport access vlan 20
  spanning-tree portfast
 interface range GigabitEthernet0/1 - 2
  switchport mode access
- switchport access vlan 30
+ switchport access vlan 20
  spanning-tree portfast
 end
 write memory
@@ -35,17 +35,16 @@ write memory
 ! Aplicar este bloque por separado en el switch Reporteros
 enable
 configure terminal
-hostname Reporteros
-vlan 40
+hostname SW-ENH-P1-PRENSA
+vlan 30
  name PRENSA
 interface range FastEthernet0/1 - 24
  switchport mode access
- switchport access vlan 40
+ switchport access vlan 30
  spanning-tree portfast
 interface range GigabitEthernet0/1 - 2
  switchport mode access
- switchport access vlan 40
+ switchport access vlan 30
  spanning-tree portfast
 end
 write memory
-

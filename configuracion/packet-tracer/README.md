@@ -5,22 +5,23 @@ Estos comandos migran la topologia existente al bloque oficial
 
 ## Orden de aplicacion
 
-1. Configurar `SWDistribucionExternos`.
-2. Configurar switches de acceso: `Jueces`, `Entrenadores` y `Reporteros`.
-3. Configurar router `Alumnos`.
-4. Configurar router `Frontera`.
-5. Configurar el servidor `DHCP-DNS-OMI`.
-6. Renovar DHCP en las computadoras y ejecutar las pruebas.
+1. Guardar un respaldo del `.pkt` funcional con direcciones `172.16.x.x`.
+2. Ordenar y etiquetar la vista logica y fisica sin cambiar conexiones.
+3. Configurar VLAN y puertos en `SWDistribucionExternos`.
+4. Conectar y configurar el servidor unificado `DHCP-DNS-OMI`.
+5. Migrar el router `Frontera`.
+6. Migrar el router `Alumnos`.
+7. Renovar DHCP en terminales y ejecutar todas las pruebas.
 
 ## Direccionamiento
 
 | Segmento | VLAN | Red | Gateway |
 | --- | ---: | --- | --- |
 | Concursantes | Acceso en router Alumnos | `172.23.24.0/23` | `172.23.24.1` |
-| Jueces | 20 | `172.23.26.0/27` | `172.23.26.1` |
-| Entrenadores | 30 | `172.23.26.32/27` | `172.23.26.33` |
-| Prensa | 40 | `172.23.26.64/27` | `172.23.26.65` |
-| Invitados | 50 | `172.23.26.96/27` | `172.23.26.97` |
+| Jueces | 10 | `172.23.26.0/27` | `172.23.26.1` |
+| Entrenadores | 20 | `172.23.26.32/27` | `172.23.26.33` |
+| Prensa | 30 | `172.23.26.64/27` | `172.23.26.65` |
+| Invitados | 40 | `172.23.26.96/27` | `172.23.26.97` |
 | Infraestructura | 60 | `172.23.26.128/27` | `172.23.26.129` |
 | Servidores | 70 | `172.23.26.160/29` | `172.23.26.161` |
 | Transito Alumnos-Frontera | No aplica | `172.23.26.168/30` | No aplica |
@@ -32,19 +33,27 @@ El servidor `DHCP-DNS-OMI` usa `172.23.26.162/29`, gateway
 
 | Puerto | Uso | VLAN |
 | --- | --- | ---: |
-| Fa0/1-2 | Prensa | 40 |
-| Fa0/10-11 | Entrenadores | 30 |
-| Fa0/15 | Jueces | 20 |
-| Fa0/20 | Invitados | 50 |
+| Fa0/1-2 | Prensa | 30 |
+| Fa0/10-11 | Entrenadores | 20 |
+| Fa0/15 | Jueces | 10 |
+| Fa0/20-22 | Invitados y espera | 40 |
 | Fa0/24 | Servidor DHCP-DNS-OMI | 70 |
-| Gi0/1 | Troncal hacia Frontera | 20, 30, 40, 50, 60, 70 |
+| Gi0/1 | Troncal hacia Frontera | 10, 20, 30, 40, 60, 70 |
 
 Si el servidor esta conectado a otro puerto, aplicar la configuracion de
 `Fa0/24` al puerto real.
+
+## Estado real
+
+- La topologia heredada funciona actualmente con direcciones `172.16.x.x`.
+- La entrega no se considera final hasta migrar al bloque `172.23.24.0/21`.
+- No ejecutar bloques parciales de migracion sin guardar primero un respaldo.
+- La secuencia detallada vive en `08-plan-final-implementacion.md`.
+- El acomodo y cableado se documentan en `09-acomodo-cableado-visual.md`.
+- Las politicas de aislamiento pendientes viven en `10-politicas-acceso.md`.
 
 ## Nota visual
 
 Si el espacio logico aparece en blanco, usar el boton **Reset Zoom** identificado
 con una lupa y la letra `R`. Despues seleccionar **Logical** y volver al cluster
 `Root`.
-
