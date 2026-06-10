@@ -18,6 +18,6 @@ Los comandos listos para aplicar en el simulador viven en
 
 ## Estado
 
-El paquete documental esta preparado. La validacion final depende de abrir
-`ActReto03.pkt`, corregir el direccionamiento heredado y capturar imagenes del
-diseno fisico y logico.
+El paquete documental y `ActReto03.pkt` reflejan el direccionamiento final.
+Se validaron los servicios y la segmentacion representativa. Queda capturar
+imagenes del diseno fisico y logico e integrarlas al reporte final.

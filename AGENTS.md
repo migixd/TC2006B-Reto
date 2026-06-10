@@ -15,7 +15,6 @@ Antes de modificar el diseno, leer `docs/README.md` y los documentos base.
 
 ## Estado critico
 
-La fuente de verdad usa el bloque `172.23.24.0/21`. El script de configuracion
-anterior usa direcciones `172.16.x.x`; por tanto, el archivo Packet Tracer debe
-revisarse y migrarse antes de considerarlo listo para entrega.
-
+La fuente de verdad y la copia final de Packet Tracer usan el bloque
+`172.23.24.0/21`. La conectividad representativa y el aislamiento fueron
+validados; faltan las capturas y la integracion del reporte final.

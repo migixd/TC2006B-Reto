@@ -2,11 +2,11 @@
 
 ## Estado y objetivo
 
-La topologia redistribuida funciona con direcciones heredadas `172.16.x.x`.
-El objetivo pendiente es migrarla al bloque oficial `172.23.24.0/21` sin
-alterar la distribucion fisica validada.
+La topologia redistribuida fue migrada al bloque oficial `172.23.24.0/21` sin
+alterar la distribucion fisica validada. Este documento conserva el orden
+aplicado para trazabilidad y recuperacion.
 
-## Antes de migrar
+## Respaldo utilizado
 
 1. Guardar `ActReto03-antes-migracion-IP.pkt`.
 2. Confirmar que funcionan PC concursante, laptop invitada y salida a Internet.

@@ -45,12 +45,13 @@ Si el servidor esta conectado a otro puerto, aplicar la configuracion de
 
 ## Estado real
 
-- La topologia heredada funciona actualmente con direcciones `172.16.x.x`.
-- La entrega no se considera final hasta migrar al bloque `172.23.24.0/21`.
-- No ejecutar bloques parciales de migracion sin guardar primero un respaldo.
+- La topologia final fue migrada al bloque `172.23.24.0/21`.
+- `DHCP-DNS-OMI` es el unico servidor DHCP interno activo.
+- Se validaron DHCP, DNS, EIGRP, NAT, Internet, troncales y aislamiento.
+- El respaldo anterior a la migracion debe conservarse fuera del entregable.
 - La secuencia detallada vive en `08-plan-final-implementacion.md`.
 - El acomodo y cableado se documentan en `09-acomodo-cableado-visual.md`.
-- Las politicas de aislamiento pendientes viven en `10-politicas-acceso.md`.
+- Las politicas de aislamiento implementadas viven en `10-politicas-acceso.md`.
 
 ## Nota visual
 

@@ -45,13 +45,12 @@ Packet Tracer no ofrece ese modelo, por lo que se utiliza Cisco Catalyst
 Esta sustitucion aplica solamente al simulador y no modifica la propuesta
 economica.
 
-## Validacion pendiente antes de entrega
+## Validacion antes de entrega
 
-El archivo de trabajo conserva configuracion heredada con direcciones
-`172.16.x.x`. Antes de generar el PDF final deben migrarse todas las interfaces,
-pools DHCP, rutas, NAT y pruebas al bloque oficial `172.23.24.0/21`.
+El archivo final fue migrado al bloque oficial `172.23.24.0/21`. Se validaron
+interfaces, pools DHCP, DNS, rutas, NAT, troncales y aislamiento entre los
+segmentos representativos. Falta insertar las capturas y evidencia final.
 
 ## Evidencia de trabajo colaborativo
 
 **Insertar aqui capturas, registros de reunion o enlaces de evidencia.**
-

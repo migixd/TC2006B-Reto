@@ -1,8 +1,9 @@
-# Politicas de acceso pendientes
+# Politicas de acceso implementadas
 
-La topologia heredada permite comunicacion entre todos los segmentos. Las ACL
-de aislamiento deben aplicarse solo despues de terminar la migracion IP y
-validar DHCP, DNS, EIGRP, NAT e Internet.
+La ACL `BLOQUEAR-CONCURSANTES` esta aplicada de salida en
+`Frontera GigabitEthernet0/0`. Bloquea el acceso de Invitados, Entrenadores y
+Prensa a Concursantes, conservando DNS, Internet y el acceso autorizado de
+Jueces.
 
 ## Matriz objetivo
 
@@ -14,18 +15,21 @@ validar DHCP, DNS, EIGRP, NAT e Internet.
 | Prensa | Permitido | Permitido | Denegado | Denegado |
 | Invitados | Permitido | Permitido | Denegado | Denegado |
 
-## Regla de implementacion
+## Configuracion aplicada
 
-No usar una ACL generica que niegue todo el bloque `172.23.24.0/21` antes de
-permitir explicitamente DNS, DHCP y cualquier servidor del concurso. La lista
-exacta de servicios internos debe confirmarse antes de generar los comandos
-finales.
+```cisco
+ip access-list extended BLOQUEAR-CONCURSANTES
+ deny ip 172.23.26.0 0.0.1.255 172.23.24.0 0.0.1.255
+ deny ip 172.23.28.64 0.0.0.63 172.23.24.0 0.0.1.255
+ deny ip 172.23.28.128 0.0.0.63 172.23.24.0 0.0.1.255
+ permit ip any any
 
-## Pruebas requeridas
+interface GigabitEthernet0/0
+ ip access-group BLOQUEAR-CONCURSANTES out
+```
 
-- Invitados no alcanzan `172.23.24.0/23`.
-- Prensa no alcanza `172.23.24.0/23`.
-- Entrenadores no alcanzan `172.23.24.0/23`.
-- Jueces conserva los accesos autorizados.
-- Todos los segmentos resuelven DNS y alcanzan Internet.
+## Pruebas validadas
 
+- Invitados, Prensa y Entrenadores no alcanzan Concursantes.
+- Jueces conserva acceso a Concursantes.
+- Todos los segmentos representativos resuelven DNS y alcanzan Internet.

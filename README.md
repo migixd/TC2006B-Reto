@@ -15,6 +15,7 @@ Chihuahua.
 
 ## Estado critico
 
-La fuente de verdad usa el bloque `172.23.24.0/21`. El archivo Packet Tracer de
-trabajo conserva configuracion heredada con direcciones `172.16.x.x`; debe
-migrarse y validarse antes de considerarse listo para entrega.
+La copia `entregables/ActReto03.pkt` ya usa el bloque oficial
+`172.23.24.0/21`. Se validaron DHCP, DNS, EIGRP, NAT, salida a Internet,
+troncales y aislamiento de concursantes. Quedan pendientes las capturas y la
+integracion del reporte final.

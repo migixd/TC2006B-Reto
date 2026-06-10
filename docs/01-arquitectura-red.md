@@ -40,7 +40,7 @@ flowchart LR
 
 ## Nota de implementacion
 
-La topologia validada conserva las VLAN existentes 10 a 40, pero aun usa
-direcciones `172.16.x.x`. La configuracion de migracion corregida vive en
-`configuracion/packet-tracer/` y adapta nombres, VLAN, pools DHCP,
-subinterfaces, rutas y NAT a esta arquitectura.
+La topologia final conserva las VLAN existentes 10 a 40 y fue migrada al bloque
+`172.23.24.0/21`. La configuracion aplicada vive en
+`configuracion/packet-tracer/` y documenta nombres, VLAN, pools DHCP,
+subinterfaces, rutas, NAT y aislamiento.

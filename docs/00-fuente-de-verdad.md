@@ -66,11 +66,11 @@ integran a la infraestructura institucional existente. Los routers de Packet
 Tracer se conservan unicamente para simular enrutamiento, DHCP relay, NAT y
 salida a Internet.
 
-## Pendientes bloqueantes
+## Estado y pendientes
 
-- Migrar del esquema heredado `172.16.x.x` al bloque oficial `172.23.24.0/21`.
-- Confirmar que todas las interfaces del `.pkt` tengan nombre, IP y estado.
-- Redistribuir los equipos heredados entre edificios, pisos y Wiring Closets
-  sin romper la conectividad validada.
+- La topologia fue migrada al bloque oficial `172.23.24.0/21`.
+- Se validaron DHCP, DNS, EIGRP, NAT, Internet, troncales y aislamiento.
+- Los equipos fueron redistribuidos entre edificios, pisos y Wiring Closets.
+- Falta revisar que todas las etiquetas visibles coincidan con el diseno final.
 - Capturar imagenes finales del modo Physical y del modo Logical.
 - Incorporar evidencia documental del trabajo colaborativo.

@@ -17,11 +17,11 @@
 
 ## Lista previa a entrega
 
-- [ ] Abrir y guardar la ultima version de `ActReto03.pkt`.
-- [ ] Ejecutar `show ip interface brief`, `show vlan brief` y
+- [x] Abrir y guardar la ultima version de `ActReto03.pkt`.
+- [x] Ejecutar `show ip interface brief`, `show vlan brief` y
       `show interfaces trunk` donde aplique.
-- [ ] Confirmar pools DHCP y exclusiones.
-- [ ] Probar pings permitidos y bloqueados.
+- [x] Confirmar pools DHCP y exclusiones.
+- [x] Probar pings permitidos y bloqueados.
 - [ ] Capturar vista Physical ordenada.
 - [ ] Capturar vista Logical con colores, etiquetas e interfaces.
 - [ ] Agregar capturas y evidencia colaborativa al PDF.
@@ -29,6 +29,7 @@
 
 ## Hallazgo actual
 
-La redistribucion fisica y la conectividad heredada fueron validadas, pero la
-configuracion aun usa `172.16.x.x`; por ello V02 no esta aprobada. Tambien falta
-aplicar y validar las politicas de aislamiento despues de la migracion IP.
+La migracion IP y la conectividad representativa fueron validadas. DHCP y DNS
+responden desde `172.23.28.226`; EIGRP, NAT, Internet, troncales y la ACL
+`BLOQUEAR-CONCURSANTES` funcionan. Falta completar las capturas y evidencia del
+reporte final.
