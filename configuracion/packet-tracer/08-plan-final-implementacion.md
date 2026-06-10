@@ -45,10 +45,9 @@ alterar la distribucion fisica validada.
 
 - No quedan direcciones internas `172.16.x.x`.
 - Concursantes recibe `172.23.24.x/23`.
-- Jueces recibe `172.23.26.0/27`.
-- Entrenadores recibe `172.23.26.32/27`.
-- Prensa recibe `172.23.26.64/27`.
-- Invitados recibe `172.23.26.96/27`.
-- DHCP y DNS responden en `172.23.26.162`.
+- Invitados recibe `172.23.26.0/23`.
+- Jueces recibe `172.23.28.0/27`.
+- Entrenadores recibe `172.23.28.64/26`.
+- Prensa recibe `172.23.28.128/26`.
+- DHCP y DNS responden en `172.23.28.226`.
 - EIGRP, NAT, Internet y aislamiento funcionan.
-

@@ -5,15 +5,15 @@
 | VLAN | Segmento | Subred | Gateway propuesto | Hosts utiles |
 | ---: | --- | --- | --- | ---: |
 | Acceso en router Alumnos | Concursantes | `172.23.24.0/23` | `172.23.24.1` | 510 |
-| 10 | Jueces | `172.23.26.0/27` | `172.23.26.1` | 30 |
-| 20 | Entrenadores | `172.23.26.32/27` | `172.23.26.33` | 30 |
-| 30 | Prensa | `172.23.26.64/27` | `172.23.26.65` | 30 |
-| 40 | Invitados | `172.23.26.96/27` | `172.23.26.97` | 30 |
-| 60 | Infraestructura | `172.23.26.128/27` | `172.23.26.129` | 30 |
-| 70 | Servidores | `172.23.26.160/29` | `172.23.26.161` | 6 |
-| No aplica | Transito Alumnos-Frontera | `172.23.26.168/30` | No aplica | 2 |
+| 40 | Invitados | `172.23.26.0/23` | `172.23.26.1` | 510 |
+| 10 | Jueces | `172.23.28.0/27` | `172.23.28.1` | 30 |
+| 20 | Entrenadores | `172.23.28.64/26` | `172.23.28.65` | 62 |
+| 30 | Prensa | `172.23.28.128/26` | `172.23.28.129` | 62 |
+| 60 | Infraestructura | `172.23.28.192/27` | `172.23.28.193` | 30 |
+| 70 | Servidores | `172.23.28.224/29` | `172.23.28.225` | 6 |
+| No aplica | Transito Alumnos-Frontera | `172.23.28.232/30` | No aplica | 2 |
 
-Servidor `DHCP-DNS-OMI`: `172.23.26.162/29`.
+Servidor `DHCP-DNS-OMI`: `172.23.28.226/29`.
 
 ## Topologia propuesta
 

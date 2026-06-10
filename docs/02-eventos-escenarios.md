@@ -13,6 +13,17 @@
 | E07 | Falla DHCP | DHCP-DNS-OMI no responde | Se detecta, registra y escala la falla. |
 | E08 | Intento lateral | Invitado intenta llegar a Concursantes | El trafico es bloqueado. |
 
+## Calendario y distribucion oficial
+
+| Jornada | Grupo | Espacios de examen |
+| --- | --- | --- |
+| Dia 1 manana | Primaria, 264 | 130 equipos en 1223/1224/12102/Finanzas y 134 rentados en Sala de Congresos |
+| Dia 1 tarde | Preparatoria, 132 | 130 equipos en 1223/1224/12102/Finanzas y 2 adicionales |
+| Dia 1 tarde | Secundaria, 198 | Sala de Congresos |
+| Dia 2 | Preparatoria, 132 | 128 equipos existentes y 4 adicionales |
+
+Sala de Congresos se dimensiona para su maximo de 198 equipos simultaneos.
+
 ## Colores sugeridos
 
 | Segmento | Color |
@@ -24,4 +35,3 @@
 | Invitados | Morado |
 | Infraestructura | Gris |
 | Servidores | Rojo |
-

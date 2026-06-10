@@ -5,23 +5,22 @@ hostname Alumnos
 interface GigabitEthernet0/0
  description LAN CONCURSANTES
  ip address 172.23.24.1 255.255.254.0
- ip helper-address 172.23.26.162
+ ip helper-address 172.23.28.226
  no shutdown
 
 interface GigabitEthernet0/1
  description TRANSITO A FRONTERA
- ip address 172.23.26.169 255.255.255.252
+ ip address 172.23.28.233 255.255.255.252
  no shutdown
 
 no router eigrp 777
 router eigrp 777
  network 172.23.24.0 0.0.1.255
- network 172.23.26.168 0.0.0.3
+ network 172.23.28.232 0.0.0.3
  no auto-summary
 
 no ip route 0.0.0.0 0.0.0.0 172.16.15.6
-ip route 0.0.0.0 0.0.0.0 172.23.26.170
+ip route 0.0.0.0 0.0.0.0 172.23.28.234
 
 end
 write memory
-

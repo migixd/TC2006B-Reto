@@ -2,8 +2,8 @@
 show ip interface brief
 show ip route
 show ip eigrp neighbors
-ping 172.23.26.170
-ping 172.23.26.162
+ping 172.23.28.234
+ping 172.23.28.226
 
 ! Ejecutar en Frontera
 show ip interface brief
@@ -11,8 +11,8 @@ show ip route
 show ip eigrp neighbors
 show ip nat translations
 show ip nat statistics
-ping 172.23.26.169
-ping 172.23.26.162
+ping 172.23.28.233
+ping 172.23.28.226
 ping 10.32.100.1
 
 ! Ejecutar en SWDistribucionExternos
@@ -21,7 +21,6 @@ show interfaces trunk
 
 ! En cada PC: Desktop > IP Configuration > DHCP y luego Command Prompt
 ipconfig /all
-ping 172.23.26.162
+ping 172.23.28.226
 ping 200.1.1.1
 nslookup dhcp-dns-omi.local
-

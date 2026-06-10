@@ -7,7 +7,7 @@
 | V01 | Nombres fisicos | Edificios, closets, racks, patch panels y TO estan etiquetados. |
 | V02 | Direccionamiento | No quedan direcciones `172.16.x.x` en el diseno final. |
 | V03 | DHCP por VLAN | Cada cliente obtiene IP, mascara, gateway y DNS correctos. |
-| V04 | DNS | Todos los segmentos autorizados consultan `172.23.26.162`. |
+| V04 | DNS | Todos los segmentos autorizados consultan `172.23.28.226`. |
 | V05 | Gateway | Cada cliente alcanza su gateway. |
 | V06 | Internet | Los segmentos autorizados alcanzan Internet mediante NAT. |
 | V07 | Aislamiento | Invitados y prensa no alcanzan concursantes. |

@@ -4,7 +4,7 @@ hostname Frontera
 
 interface GigabitEthernet0/0
  description TRANSITO A CONCURSANTES
- ip address 172.23.26.170 255.255.255.252
+ ip address 172.23.28.234 255.255.255.252
  ip nat inside
  no shutdown
 
@@ -21,42 +21,42 @@ no interface GigabitEthernet0/1.40
 interface GigabitEthernet0/1.20
  description ENTRENADORES
  encapsulation dot1Q 20
- ip address 172.23.26.33 255.255.255.224
- ip helper-address 172.23.26.162
+ ip address 172.23.28.65 255.255.255.192
+ ip helper-address 172.23.28.226
  ip nat inside
 
 interface GigabitEthernet0/1.30
  description PRENSA
  encapsulation dot1Q 30
- ip address 172.23.26.65 255.255.255.224
- ip helper-address 172.23.26.162
+ ip address 172.23.28.129 255.255.255.192
+ ip helper-address 172.23.28.226
  ip nat inside
 
 interface GigabitEthernet0/1.40
  description INVITADOS
  encapsulation dot1Q 40
- ip address 172.23.26.97 255.255.255.224
- ip helper-address 172.23.26.162
+ ip address 172.23.26.1 255.255.254.0
+ ip helper-address 172.23.28.226
  ip nat inside
 
 interface GigabitEthernet0/1.10
  description JUECES
  encapsulation dot1Q 10
- ip address 172.23.26.1 255.255.255.224
- ip helper-address 172.23.26.162
+ ip address 172.23.28.1 255.255.255.224
+ ip helper-address 172.23.28.226
  ip nat inside
 
 interface GigabitEthernet0/1.60
  description INFRAESTRUCTURA
  encapsulation dot1Q 60
- ip address 172.23.26.129 255.255.255.224
- ip helper-address 172.23.26.162
+ ip address 172.23.28.193 255.255.255.224
+ ip helper-address 172.23.28.226
  ip nat inside
 
 interface GigabitEthernet0/1.70
  description SERVIDORES
  encapsulation dot1Q 70
- ip address 172.23.26.161 255.255.255.248
+ ip address 172.23.28.225 255.255.255.248
  ip nat inside
 
 interface GigabitEthernet0/2

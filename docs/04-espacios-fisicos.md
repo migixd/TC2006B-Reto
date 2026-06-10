@@ -26,6 +26,10 @@ nombre del campus se integra en el contenedor de ciudad.
 | Edificio de Negocios | 2 | Aula 1223, Aula 1224 y Laboratorio de Finanzas |
 | Edificio de Ingenieria | 1 | Laboratorio de IA y Aula 12102 |
 
+Reto 01 tambien identifica el aula 12401 como sala de computo existente en
+Ingenieria, pero la solucion elegida de Reto 02 usa 12102 para examen y el
+Laboratorio de Inteligencia Artificial para jueces.
+
 ## Closets y racks propuestos
 
 Los Wiring Closets representan cuartos de telecomunicaciones por piso o zona,
@@ -73,3 +77,14 @@ temporalmente en `Wiring Closet CIT-P1` hasta validar la ubicacion final.
 Las areas Sala Borrego, Sala Consejo, Laboratorio de IA y Salon 7101 pertenecen
 a las redes Invitados, Prensa, Jueces y Entrenadores respectivamente; no deben
 conectarse a `DIST-ALUMNOS`.
+
+## Infraestructura existente confirmada
+
+- Sala de Congresos: siete AP existentes y cinco switches temporales de 48
+  puertos para un maximo de 198 equipos.
+- Aulas 1223, 1224, 12102, Laboratorio de Finanzas, Laboratorio de IA y Salon
+  7101: un AP existente por espacio.
+- Domo de Negocios: seis AP existentes.
+- Sala Borrego: dos AP existentes.
+- Ocho nodos fisicos conectan los equipos temporales con la infraestructura
+  institucional.

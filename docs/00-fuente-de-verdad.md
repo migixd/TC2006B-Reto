@@ -6,9 +6,17 @@
 - Sede: Tec de Monterrey Campus Chihuahua.
 - Competidores totales: 594.
 - Maximo simultaneo: 330 participantes.
+- Jueces: 10.
+- Entrenadores: 40.
+- Reporteros: 32.
+- Invitados estimados: aproximadamente 300.
 - Bloque asignado: `172.23.24.0/21`.
-- DNS interno y servidor DHCP: `172.23.26.162`.
+- DNS interno y servidor DHCP propuesto: `172.23.28.226`.
 - Edificios fisicos: CIT, Edificio de Negocios y Edificio de Ingenieria.
+
+El Reto 01 declara un total de 686 asistentes antes de invitados, pero el
+desglose `594 + 10 + 40 + 32` suma 676. Para dimensionar la red se usan las
+cantidades detalladas y el estimado adicional de invitados.
 
 ## Participantes
 
@@ -18,6 +26,22 @@
 | Secundaria | 198 |
 | Primaria | 264 |
 | Total | 594 |
+
+## Solucion operativa elegida
+
+- Dia 1 por la manana: primaria, 264 participantes.
+- Dia 1 por la tarde: secundaria y preparatoria, 330 participantes.
+- Dia 2: preparatoria, 132 participantes.
+- Espacios con equipo institucional: aulas 1223, 1224, 12102 y Laboratorio de
+  Finanzas, con 130 equipos considerados en Reto 02.
+- Sala de Congresos: hasta 198 equipos rentados simultaneos y cinco switches de
+  48 puertos.
+- Sala Borrego: invitados.
+- Sala Consejo: prensa.
+- Laboratorio de Inteligencia Artificial: jueces.
+- Salon 7101: entrenadores.
+- Primer piso CIT y Domo de Negocios: areas de espera con infraestructura WiFi
+  existente.
 
 ## Requerimientos
 
@@ -36,6 +60,11 @@
 | Cisco Catalyst 9300, 48 puertos | Cisco Catalyst 2960-24TT | Es el modelo disponible mas cercano para representar acceso con VLAN y enlaces troncales. |
 
 La sustitucion es solo para simulacion y no modifica la propuesta economica.
+
+Reto 02 no contempla routers nuevos en produccion porque los servicios se
+integran a la infraestructura institucional existente. Los routers de Packet
+Tracer se conservan unicamente para simular enrutamiento, DHCP relay, NAT y
+salida a Internet.
 
 ## Pendientes bloqueantes
 

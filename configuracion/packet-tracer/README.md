@@ -18,16 +18,16 @@ Estos comandos migran la topologia existente al bloque oficial
 | Segmento | VLAN | Red | Gateway |
 | --- | ---: | --- | --- |
 | Concursantes | Acceso en router Alumnos | `172.23.24.0/23` | `172.23.24.1` |
-| Jueces | 10 | `172.23.26.0/27` | `172.23.26.1` |
-| Entrenadores | 20 | `172.23.26.32/27` | `172.23.26.33` |
-| Prensa | 30 | `172.23.26.64/27` | `172.23.26.65` |
-| Invitados | 40 | `172.23.26.96/27` | `172.23.26.97` |
-| Infraestructura | 60 | `172.23.26.128/27` | `172.23.26.129` |
-| Servidores | 70 | `172.23.26.160/29` | `172.23.26.161` |
-| Transito Alumnos-Frontera | No aplica | `172.23.26.168/30` | No aplica |
+| Invitados | 40 | `172.23.26.0/23` | `172.23.26.1` |
+| Jueces | 10 | `172.23.28.0/27` | `172.23.28.1` |
+| Entrenadores | 20 | `172.23.28.64/26` | `172.23.28.65` |
+| Prensa | 30 | `172.23.28.128/26` | `172.23.28.129` |
+| Infraestructura | 60 | `172.23.28.192/27` | `172.23.28.193` |
+| Servidores | 70 | `172.23.28.224/29` | `172.23.28.225` |
+| Transito Alumnos-Frontera | No aplica | `172.23.28.232/30` | No aplica |
 
-El servidor `DHCP-DNS-OMI` usa `172.23.26.162/29`, gateway
-`172.23.26.161` y DNS `172.23.26.162`.
+El servidor `DHCP-DNS-OMI` usa `172.23.28.226/29`, gateway
+`172.23.28.225` y DNS `172.23.28.226`.
 
 ## Puertos de distribucion
 
