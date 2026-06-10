@@ -23,6 +23,8 @@
 - [x] Confirmar pools DHCP y exclusiones.
 - [x] Probar pings permitidos y bloqueados.
 - [ ] Capturar vista Physical ordenada.
+- [ ] Completar la redistribucion fisica y las conexiones pendientes.
+- [ ] Validar una terminal representativa por Wiring Closet.
 - [ ] Capturar vista Logical con colores, etiquetas e interfaces.
 - [ ] Agregar capturas y evidencia colaborativa al PDF.
 - [ ] Comprimir `.pkt` y PDF como `ActReto03.zip`.
@@ -31,5 +33,6 @@
 
 La migracion IP y la conectividad representativa fueron validadas. DHCP y DNS
 responden desde `172.23.28.226`; EIGRP, NAT, Internet, troncales y la ACL
-`BLOQUEAR-CONCURSANTES` funcionan. Falta completar las capturas y evidencia del
-reporte final.
+`BLOQUEAR-CONCURSANTES` funcionan. La construccion fisica sigue en progreso:
+faltan conexiones en algunos espacios, validacion por closet, capturas y
+evidencia del reporte final.

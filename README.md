@@ -17,5 +17,7 @@ Chihuahua.
 
 La copia `entregables/ActReto03.pkt` ya usa el bloque oficial
 `172.23.24.0/21`. Se validaron DHCP, DNS, EIGRP, NAT, salida a Internet,
-troncales y aislamiento de concursantes. Quedan pendientes las capturas y la
+troncales y aislamiento de concursantes. La redistribucion fisica por edificios
+y closets esta en progreso: todavia faltan conexiones y equipos terminales
+representativos en varios espacios. Tambien quedan pendientes las capturas y la
 integracion del reporte final.

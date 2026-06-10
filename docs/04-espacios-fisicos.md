@@ -43,8 +43,8 @@ no cada salon individual.
 | Edificio de Negocios | `Wiring Closet ENH-IDF-P2` | `Rack ENH-IDF-P2.1` | Aulas 1223, 1224 y Laboratorio de Finanzas |
 | Edificio de Ingenieria | `Wiring Closet EIC-MDF-P1` | `Rack EIC-MDF-P1.1` | Laboratorio de IA y Aula 12102 |
 
-El nucleo, routers de frontera, DHCP y distribucion principal se conservaran
-temporalmente en `Wiring Closet CIT-P1` hasta validar la ubicacion final.
+El nucleo, routers de frontera, DHCP y distribucion principal se conservan en
+`Wiring Closet CIT-MDF-P1`.
 
 ## Nomenclatura TIA/EIA-606-B propuesta
 
@@ -88,3 +88,18 @@ conectarse a `DIST-ALUMNOS`.
 - Sala Borrego: dos AP existentes.
 - Ocho nodos fisicos conectan los equipos temporales con la infraestructura
   institucional.
+
+## Estado de construccion
+
+La jerarquia de edificios, Wiring Closets y racks ya fue creada. La
+redistribucion de switches y el cableado fisico aun estan en progreso; no todos
+los espacios tienen conexiones o equipos terminales representativos.
+
+La ultima copia publicada en `entregables/ActReto03.pkt` es un avance de
+trabajo. Antes de marcar el diseno fisico como terminado se debe:
+
+- Confirmar que cada switch se encuentre en su closet y rack asignado.
+- Completar conexiones pendientes sin perder los enlaces CDP existentes.
+- Agregar patch panels y TO solo donde representen cableado estructurado.
+- Probar al menos una terminal representativa por closet.
+- Capturar las vistas Physical de ciudad, edificios, closets y racks.
