@@ -55,6 +55,8 @@ Si el servidor esta conectado a otro puerto, aplicar la configuracion de
 - El avance de construccion fisica vive en `11-estado-construccion-fisica.md`.
 - La matriz completa de conexiones, puertos y cables vive en
   `12-matriz-cableado-fisico-completo.md`.
+- La integracion exacta de patch panels, wall mounts y colores vive en
+  `13-patch-panels-y-colores.md`.
 
 ## Nota visual
 
