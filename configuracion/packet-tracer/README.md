@@ -52,6 +52,9 @@ Si el servidor esta conectado a otro puerto, aplicar la configuracion de
 - La secuencia detallada vive en `08-plan-final-implementacion.md`.
 - El acomodo y cableado se documentan en `09-acomodo-cableado-visual.md`.
 - Las politicas de aislamiento implementadas viven en `10-politicas-acceso.md`.
+- El avance de construccion fisica vive en `11-estado-construccion-fisica.md`.
+- La matriz completa de conexiones, puertos y cables vive en
+  `12-matriz-cableado-fisico-completo.md`.
 
 ## Nota visual
 

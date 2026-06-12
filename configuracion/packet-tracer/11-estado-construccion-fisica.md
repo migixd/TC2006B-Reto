@@ -1,6 +1,6 @@
 # Estado de construccion fisica
 
-Fecha de corte: 9 de junio de 2026.
+Fecha de corte: 12 de junio de 2026.
 
 ## Completado
 
@@ -10,6 +10,8 @@ Fecha de corte: 9 de junio de 2026.
 - Wiring Closets MDF/IDF y racks creados.
 - Hostnames de switches de acceso definidos.
 - Inventario de enlaces de `DIST-ALUMNOS` documentado.
+- Matriz completa de conexiones, puertos y cables documentada en
+  `12-matriz-cableado-fisico-completo.md`.
 
 ## En progreso
 
@@ -31,4 +33,3 @@ Fecha de corte: 9 de junio de 2026.
 La copia actual de `entregables/ActReto03.pkt` es un avance de trabajo. No debe
 marcarse como diseno fisico terminado hasta completar y validar los puntos
 pendientes.
-
