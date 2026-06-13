@@ -34,5 +34,5 @@
 La migracion IP y la conectividad representativa fueron validadas. DHCP y DNS
 responden desde `172.23.28.226`; EIGRP, NAT, Internet, troncales y la ACL
 `BLOQUEAR-CONCURSANTES` funcionan. La construccion fisica fue terminada en
-`ActReto04-FINAL.pkt`. Faltan la validacion final por closet, capturas y
+`ActReto05-FINAL.pkt`. Faltan la validacion final por closet, capturas y
 evidencia del reporte final.

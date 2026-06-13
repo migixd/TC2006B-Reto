@@ -19,6 +19,4 @@ Los comandos listos para aplicar en el simulador viven en
 ## Estado
 
 El paquete documental y `../entregables/ActReto05-FINAL.pkt` reflejan la
-version mas reciente del direccionamiento y la construccion fisica. El reporte
-publicado vive en `../entregables/ActReto03-reporte-final.pdf`; la propuesta
-VLSM y sus evidencias viven en `../entregables/ActReto04-VLSM/`.
+version mas reciente del direccionamiento y la construccion fisica.

@@ -96,7 +96,7 @@ La jerarquia de edificios, Wiring Closets y racks fue creada. Los switches se
 redistribuyeron, y los Copper/Fiber Patch Panels y Copper Wall Mounts quedaron
 montados y etiquetados. Los enlaces funcionales existentes se conservaron.
 
-La version final vive en `entregables/ActReto04-FINAL.pkt`. Antes de entregar
+La version final vive en `entregables/ActReto05-FINAL.pkt`. Antes de entregar
 solo resta:
 
 - Probar al menos una terminal representativa por closet.

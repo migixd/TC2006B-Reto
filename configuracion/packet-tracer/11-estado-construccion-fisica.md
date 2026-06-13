@@ -27,5 +27,4 @@ Fecha de corte: 12 de junio de 2026.
 ## Regla de seguridad
 
 `entregables/ActReto03.pkt` se conserva como respaldo historico.
-`entregables/ActReto04-FINAL.pkt` conserva el cierre de Reto 04.
 `entregables/ActReto05-FINAL.pkt` es la version mas reciente para entrega.
