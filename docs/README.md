@@ -18,7 +18,7 @@ Los comandos listos para aplicar en el simulador viven en
 
 ## Estado
 
-El paquete documental y `../entregables/ActReto04-FINAL.pkt` reflejan el
-direccionamiento y la construccion fisica final. Se validaron los servicios y
-la segmentacion representativa. Queda capturar imagenes del diseno fisico y
-logico e integrarlas al reporte final.
+El paquete documental y `../entregables/ActReto05-FINAL.pkt` reflejan la
+version mas reciente del direccionamiento y la construccion fisica. El reporte
+publicado vive en `../entregables/ActReto03-reporte-final.pdf`; la propuesta
+VLSM y sus evidencias viven en `../entregables/ActReto04-VLSM/`.

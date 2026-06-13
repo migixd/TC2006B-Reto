@@ -17,7 +17,7 @@ Fecha de corte: 12 de junio de 2026.
 - Fiber y Copper Patch Panels colocados y etiquetados.
 - Copper Wall Mounts colocados para el cableado horizontal representativo.
 - Codigo visual de colores aplicado al cableado.
-- Archivo final guardado como `entregables/ActReto04-FINAL.pkt`.
+- Version mas reciente guardada como `entregables/ActReto05-FINAL.pkt`.
 
 ## Pendiente
 
@@ -27,4 +27,5 @@ Fecha de corte: 12 de junio de 2026.
 ## Regla de seguridad
 
 `entregables/ActReto03.pkt` se conserva como respaldo historico.
-`entregables/ActReto04-FINAL.pkt` es la version final para capturas y entrega.
+`entregables/ActReto04-FINAL.pkt` conserva el cierre de Reto 04.
+`entregables/ActReto05-FINAL.pkt` es la version mas reciente para entrega.
