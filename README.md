@@ -1,4 +1,4 @@
-# TC2006B Reto - Red OMI Campus Chihuahua
+# TC2006B Reto - Red OMI Campus Chihuahua - Equipo 4
 
 Documentación SDD y archivos de trabajo para el diseño físico y lógico de red
 de la XXV Olimpiada Mexicana de Informática en Tec de Monterrey Campus
