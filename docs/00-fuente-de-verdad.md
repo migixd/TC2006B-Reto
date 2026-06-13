@@ -1,6 +1,6 @@
 # Fuente de verdad
 
-## Proyecto
+## Proyecto Descripción
 
 - Evento: XXV Olimpiada Mexicana de Informática.
 - Sede: Tec de Monterrey Campus Chihuahua.
