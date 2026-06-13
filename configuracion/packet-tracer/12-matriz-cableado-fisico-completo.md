@@ -156,11 +156,11 @@ Agregar como representacion:
 
 | Closet | Copper Patch Panel | Fiber Patch Panel |
 | --- | --- | --- |
-| `CIT-MDF-P1` | `CIT-P1-PP-01` | `CIT-P1-FPP-01` |
-| `CIT-IDF-P3` | `CIT-P3-PP-01` | `CIT-P3-FPP-01` |
-| `ENH-MDF-P1` | `ENH-P1-PP-01` | `ENH-P1-FPP-01` |
-| `ENH-IDF-P2` | `ENH-P2-PP-01` | `ENH-P2-FPP-01` |
-| `EIC-MDF-P1` | `EIC-P1-PP-01` | `EIC-P1-FPP-01` |
+| `CIT-MDF-P1` | `CIT-P1-CPP-01` y `CIT-P1-CPP-02` | `CIT-P1-FPP-01` |
+| `CIT-IDF-P3` | `CIT-P3-CPP-01` | `CIT-P3-FPP-01` |
+| `ENH-MDF-P1` | `ENH-P1-CPP-01` | `ENH-P1-FPP-01` |
+| `ENH-IDF-P2` | `ENH-P2-CPP-01` | `ENH-P2-FPP-01` |
+| `EIC-MDF-P1` | `EIC-P1-CPP-01` | `EIC-P1-FPP-01` |
 
 Backbone etiquetado:
 

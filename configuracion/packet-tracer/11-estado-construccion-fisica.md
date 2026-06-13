@@ -12,24 +12,19 @@ Fecha de corte: 12 de junio de 2026.
 - Inventario de enlaces de `DIST-ALUMNOS` documentado.
 - Matriz completa de conexiones, puertos y cables documentada en
   `12-matriz-cableado-fisico-completo.md`.
-
-## En progreso
-
-- Redistribucion de switches a closets y racks.
-- Conexion de equipos terminales representativos.
-- Acomodo visual y etiquetado dentro de racks.
+- Redistribucion de switches a closets y racks terminada.
+- Equipos terminales representativos acomodados.
+- Fiber y Copper Patch Panels colocados y etiquetados.
+- Copper Wall Mounts colocados para el cableado horizontal representativo.
+- Codigo visual de colores aplicado al cableado.
+- Archivo final guardado como `entregables/ActReto04-FINAL.pkt`.
 
 ## Pendiente
 
-- Completar todas las conexiones fisicas requeridas.
-- Agregar patch panels y TO donde aplique.
-- Validar al menos una terminal por Wiring Closet.
-- Confirmar CDP y estado de puertos despues de la redistribucion.
 - Capturar vistas Physical y Logical finales.
 - Integrar evidencias y generar el PDF/ZIP de entrega.
 
 ## Regla de seguridad
 
-La copia actual de `entregables/ActReto03.pkt` es un avance de trabajo. No debe
-marcarse como diseno fisico terminado hasta completar y validar los puntos
-pendientes.
+`entregables/ActReto03.pkt` se conserva como respaldo historico.
+`entregables/ActReto04-FINAL.pkt` es la version final para capturas y entrega.

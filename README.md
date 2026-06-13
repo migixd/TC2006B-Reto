@@ -9,15 +9,16 @@ Chihuahua.
 - `AGENTS.md`: reglas para trabajar en el repositorio.
 - `docs/README.md`: índice de la fuente de verdad.
 - `configuracion/packet-tracer/`: comandos y orden para migrar la topología.
-- `entregables/ActReto03.pkt`: copia del archivo Packet Tracer de trabajo.
+- `entregables/ActReto03.pkt`: respaldo del entregable físico anterior.
+- `entregables/ActReto04-FINAL.pkt`: archivo Packet Tracer final.
 - `entregables/ActReto03-reporte-borrador.pdf`: reporte pendiente de capturas finales.
 - `referencias/configuracion-heredada.rtf`: configuración anterior para consulta.
 
 ## Estado crítico
 
-La copia `entregables/ActReto03.pkt` ya usa el bloque oficial
-`172.23.24.0/21`. Se validaron DHCP, DNS, EIGRP, NAT, salida a Internet,
-troncales y aislamiento de concursantes. La redistribución física por edificios
-y closets está en progreso: todavía faltan conexiones y equipos terminales
-representativos en varios espacios. También quedan pendientes las capturas y la
-integración del reporte final.
+El archivo `entregables/ActReto04-FINAL.pkt` contiene la topología lógica y el
+acomodo físico final por edificios, Wiring Closets y racks. Incluye patch
+panels, wall mounts, nomenclatura y código visual de cableado. La red utiliza el
+bloque oficial `172.23.24.0/21`; se validaron DHCP, DNS, EIGRP, NAT, salida a
+Internet, troncales y aislamiento de concursantes. Quedan pendientes las
+capturas y la integración del reporte final.

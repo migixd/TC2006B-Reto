@@ -18,6 +18,7 @@ Los comandos listos para aplicar en el simulador viven en
 
 ## Estado
 
-El paquete documental y `ActReto03.pkt` reflejan el direccionamiento final.
-Se validaron los servicios y la segmentacion representativa. Queda capturar
-imagenes del diseno fisico y logico e integrarlas al reporte final.
+El paquete documental y `../entregables/ActReto04-FINAL.pkt` reflejan el
+direccionamiento y la construccion fisica final. Se validaron los servicios y
+la segmentacion representativa. Queda capturar imagenes del diseno fisico y
+logico e integrarlas al reporte final.

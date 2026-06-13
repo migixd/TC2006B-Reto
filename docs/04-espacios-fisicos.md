@@ -50,7 +50,8 @@ El nucleo, routers de frontera, DHCP y distribucion principal se conservan en
 
 | Elemento | Patron | Ejemplo |
 | --- | --- | --- |
-| Patch panel | `<EDIFICIO>-P<PISO>-PP-<NN>` | `CIT-P3-PP-01` |
+| Copper Patch Panel | `<EDIFICIO>-P<PISO>-CPP-<NN>` | `CIT-P3-CPP-01` |
+| Fiber Patch Panel | `<EDIFICIO>-P<PISO>-FPP-<NN>` | `CIT-P3-FPP-01` |
 | Telecommunications Outlet | `<EDIFICIO>-<ESPACIO>-TO-<NN>` | `ENH-DOMO-TO-01` |
 | Switch | `SW-<EDIFICIO>-P<PISO>-ACC-<NN>` | `SW-EIC-P1-ACC-01` |
 | Enlace troncal | `TRK-<ORIGEN>-<DESTINO>` | `TRK-CIT-EIC` |
@@ -91,15 +92,13 @@ conectarse a `DIST-ALUMNOS`.
 
 ## Estado de construccion
 
-La jerarquia de edificios, Wiring Closets y racks ya fue creada. La
-redistribucion de switches y el cableado fisico aun estan en progreso; no todos
-los espacios tienen conexiones o equipos terminales representativos.
+La jerarquia de edificios, Wiring Closets y racks fue creada. Los switches se
+redistribuyeron, y los Copper/Fiber Patch Panels y Copper Wall Mounts quedaron
+montados y etiquetados. Los enlaces funcionales existentes se conservaron.
 
-La ultima copia publicada en `entregables/ActReto03.pkt` es un avance de
-trabajo. Antes de marcar el diseno fisico como terminado se debe:
+La version final vive en `entregables/ActReto04-FINAL.pkt`. Antes de entregar
+solo resta:
 
-- Confirmar que cada switch se encuentre en su closet y rack asignado.
-- Completar conexiones pendientes sin perder los enlaces CDP existentes.
-- Agregar patch panels y TO solo donde representen cableado estructurado.
 - Probar al menos una terminal representativa por closet.
 - Capturar las vistas Physical de ciudad, edificios, closets y racks.
+- Integrar las capturas y evidencias al reporte.
