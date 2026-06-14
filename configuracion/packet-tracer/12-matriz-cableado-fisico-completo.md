@@ -105,7 +105,7 @@ Ubicar los equipos de acceso en el closet que atiende su espacio:
 
 | Segmento | Closet | Equipo |
 | --- | --- | --- |
-| Jueces | `EIC-MDF-P1` | `SW-EIC-P1-JUECES` y `AP-EIC-P1-IA` |
+| Jueces | `EIC-MDF-P1` | `SW-EIC-P1-JUECES` |
 | Entrenadores | `CIT-MDF-P1` | `SW-CIT-P1-ENTRENADORES` y `AP-CIT-P1-7101` |
 | Prensa | `ENH-MDF-P1` | `SW-ENH-P1-PRENSA` y `AP-ENH-P1-CONSEJO` |
 | Invitados | `ENH-MDF-P1` | `AP-ENH-P1-INVITADOS-01` y AP representativos |

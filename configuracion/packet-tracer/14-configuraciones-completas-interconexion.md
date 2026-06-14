@@ -1,12 +1,20 @@
-# Configuraciones de equipos de interconexión
+# Configuraciones finales de equipos de interconexión
 
-Estas configuraciones corresponden a la topología final `ActReto05-FINAL.pkt`.
-Antes de pegar comandos, guardar una copia del archivo.
+Documento corregido según la configuración final aplicada en Packet Tracer.
+Se conservaron las conexiones, VLAN, direccionamiento, DHCP, EIGRP, NAT y ACL
+que ya funcionaban. No se agregaron AP inexistentes ni se modificaron enlaces.
 
-## Credenciales comunes solicitadas por la rúbrica
+## Credenciales finales
 
-Aplicar este bloque en **Alumnos**, **Frontera**, `DIST-ALUMNOS`,
-`SWDistribucionExternos` y cada switch de acceso.
+Estas credenciales fueron configuradas en los routers y switches:
+
+| Uso | Contraseña |
+| --- | --- |
+| Acceso por consola | `ConsolaOMI` |
+| Modo privilegiado `enable` | `OMI2026` |
+| Acceso VTY | `VTYOMI` |
+
+Bloque aplicado en cada router y switch:
 
 ```cisco
 enable
@@ -149,6 +157,7 @@ write memory
 enable
 configure terminal
 hostname SWDistribucionExternos
+
 vlan 10
  name JUECES
 vlan 20
@@ -166,79 +175,40 @@ interface range FastEthernet0/1 - 2
  switchport mode access
  switchport access vlan 30
  spanning-tree portfast
+
 interface range FastEthernet0/10 - 11
  switchport mode access
  switchport access vlan 20
  spanning-tree portfast
+
 interface FastEthernet0/15
  switchport mode access
  switchport access vlan 10
  spanning-tree portfast
+
 interface range FastEthernet0/20 - 22
  switchport mode access
  switchport access vlan 40
  spanning-tree portfast
+
 interface FastEthernet0/24
  switchport mode access
  switchport access vlan 70
  spanning-tree portfast
+
 interface GigabitEthernet0/1
  switchport mode trunk
  switchport trunk allowed vlan 10,20,30,40,60,70
+
 end
 write memory
 ```
 
-## DIST-ALUMNOS
+## Switches externos
 
-No crear VLAN adicionales ni cambiar sus enlaces, porque actualmente distribuye
-la LAN de concursantes directamente hacia `Alumnos Gi0/0`.
+### SW-EIC-P1-JUECES
 
-```cisco
-enable
-configure terminal
-hostname DIST-ALUMNOS
-interface GigabitEthernet0/1
- description ROUTER ALUMNOS GI0/0
-interface range FastEthernet0/1 - 11
- description UPLINK SWITCH ACCESO CONCURSANTES
-end
-write memory
-```
-
-## Switches de concursantes
-
-Aplicar el siguiente bloque individualmente y cambiar `<HOSTNAME>` por uno de
-los nombres indicados:
-
-- `SW-CIT-P3-CONG-01`
-- `SW-CIT-P3-CONG-02`
-- `SW-CIT-P3-CONG-03`
-- `SW-CIT-P3-CONG-04`
-- `SW-CIT-P3-CONG-05`
-- `SW-ALUMNOS-RESERVA-01`
-- `SW-ALUMNOS-RESERVA-02`
-- `SW-ENH-P2-1223`
-- `SW-ENH-P2-1224`
-- `SW-EIC-P1-12102`
-- `SW-ENH-P2-FIN`
-
-```cisco
-enable
-configure terminal
-hostname <HOSTNAME>
-interface range FastEthernet0/1 - 23
- description TERMINALES CONCURSANTES
- switchport mode access
- spanning-tree portfast
-interface FastEthernet0/24
- description UPLINK DIST-ALUMNOS
- switchport mode access
-end
-write memory
-```
-
-## SW-EIC-P1-JUECES
+El segmento de Jueces es completamente cableado. No cuenta con AP.
 
 ```cisco
 enable
@@ -258,7 +228,7 @@ end
 write memory
 ```
 
-## SW-CIT-P1-ENTRENADORES
+### SW-CIT-P1-ENTRENADORES
 
 ```cisco
 enable
@@ -278,7 +248,7 @@ end
 write memory
 ```
 
-## SW-ENH-P1-PRENSA
+### SW-ENH-P1-PRENSA
 
 ```cisco
 enable
@@ -298,14 +268,39 @@ end
 write memory
 ```
 
-## Access Points
+## DIST-ALUMNOS y switches de concursantes
 
-Los AP de Packet Tracer se configuran desde **Config**, no mediante CLI:
+Se conservaron sus enlaces y configuración funcional. Solamente se aplicaron
+las credenciales finales y se verificaron sus hostnames.
 
-- AP de invitados: puerto cableado conectado a VLAN 40.
-- AP de entrenadores: puerto cableado conectado a VLAN 20.
-- AP de prensa: puerto cableado conectado a VLAN 30.
-- Asignar SSID descriptivo y utilizar DHCP para los clientes inalámbricos.
+- `DIST-ALUMNOS`
+- `SW-CIT-P3-CONG-01`
+- `SW-CIT-P3-CONG-02`
+- `SW-CIT-P3-CONG-03`
+- `SW-CIT-P3-CONG-04`
+- `SW-CIT-P3-CONG-05`
+- `SW-ALUMNOS-RESERVA-01`
+- `SW-ALUMNOS-RESERVA-02`
+- `SW-ENH-P2-1223`
+- `SW-ENH-P2-1224`
+- `SW-EIC-P1-12102`
+- `SW-ENH-P2-FIN`
+
+No se cambiaron sus VLAN, puertos ni enlaces para evitar afectar la red de
+concursantes.
+
+## Access Points existentes
+
+No existe AP de Jueces.
+
+| Segmento | SSID | Seguridad | Clave |
+| --- | --- | --- | --- |
+| Entrenadores | `OMI-ENTRENADORES` | WPA2-PSK | `EntrenaOMI2026` |
+| Prensa | `OMI-PRENSA` | WPA2-PSK | `PrensaOMI2026` |
+| Invitados | `OMI-INVITADOS` | WPA2-PSK | `InvitadosOMI2026` |
+
+Los clientes inalámbricos se reconectaron al SSID correspondiente y obtienen
+su dirección mediante DHCP.
 
 ## Servidor DHCP-DNS-OMI
 
@@ -313,26 +308,20 @@ Los AP de Packet Tracer se configuran desde **Config**, no mediante CLI:
 - Máscara: `255.255.255.248`
 - Gateway: `172.23.28.225`
 - DNS: `172.23.28.226`
-- DNS A: `dhcp-dns-omi.local` → `172.23.28.226`
-
-Pools:
+- Registro DNS: `dhcp-dns-omi.local` → `172.23.28.226`
 
 | Pool | Inicio | Máscara | Gateway | Máximo |
 | --- | --- | --- | --- | ---: |
-| CONCURSANTES | 172.23.24.10 | 255.255.254.0 | 172.23.24.1 | 330 |
-| INVITADOS | 172.23.26.10 | 255.255.254.0 | 172.23.26.1 | 300 |
-| JUECES | 172.23.28.10 | 255.255.255.224 | 172.23.28.1 | 20 |
-| ENTRENADORES | 172.23.28.70 | 255.255.255.192 | 172.23.28.65 | 40 |
-| PRENSA | 172.23.28.135 | 255.255.255.192 | 172.23.28.129 | 32 |
-| INFRAESTRUCTURA | 172.23.28.200 | 255.255.255.224 | 172.23.28.193 | 20 |
+| CONCURSANTES | `172.23.24.10` | `255.255.254.0` | `172.23.24.1` | 330 |
+| INVITADOS | `172.23.26.10` | `255.255.254.0` | `172.23.26.1` | 300 |
+| JUECES | `172.23.28.10` | `255.255.255.224` | `172.23.28.1` | 20 |
+| ENTRENADORES | `172.23.28.70` | `255.255.255.192` | `172.23.28.65` | 40 |
+| PRENSA | `172.23.28.135` | `255.255.255.192` | `172.23.28.129` | 32 |
+| INFRAESTRUCTURA | `172.23.28.200` | `255.255.255.224` | `172.23.28.193` | 20 |
 
-## Equipos que no deben modificarse sin revisar su configuración
+## Comandos de verificación
 
-`CampusCore`, `FronteraCampus`, router Internet y los servidores externos
-simulan la infraestructura institucional y la salida externa. Mantenerlos como
-están mientras respondan correctamente las pruebas hacia `200.1.1.1`.
-
-## Verificación
+Routers:
 
 ```cisco
 show ip interface brief
@@ -340,7 +329,22 @@ show ip route
 show ip eigrp neighbors
 show ip nat translations
 show ip nat statistics
+```
+
+Switches:
+
+```cisco
 show vlan brief
 show interfaces trunk
+show interfaces status
 show cdp neighbors
+```
+
+Terminales:
+
+```text
+ipconfig /all
+ping <gateway-del-segmento>
+ping 172.23.28.226
+ping 200.1.1.1
 ```
