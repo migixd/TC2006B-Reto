@@ -30,6 +30,18 @@ ping <gateway-del-segmento>
 ping 172.23.28.226
 ping 200.1.1.1
 nslookup dhcp-dns-omi.local
+nslookup servicios.omi.local
+nslookup concurso.omi.local
+ping 200.1.1.50
+
+! En Desktop > Web Browser de cada terminal autorizada
+http://servicios.omi.local
+http://200.1.1.50
+http://concurso.omi.local
+
+! Resultados esperados
+! servicios.omi.local resuelve a 172.23.28.226 y muestra la pagina interna.
+! concurso.omi.local resuelve a 200.1.1.50 y muestra la pagina del concurso.
 
 ! Terminales de concursantes que deben documentarse
 ! Sala de Congresos: PC-CIT-CONG-01 a PC-CIT-CONG-05

@@ -31,3 +31,41 @@ En **Services > DNS**, activar el servicio y agregar:
 | Nombre | Direccion |
 | --- | --- |
 | `dhcp-dns-omi.local` | `172.23.28.226` |
+| `servicios.omi.local` | `172.23.28.226` |
+| `concurso.omi.local` | `200.1.1.50` |
+
+## Servicio web interno
+
+En `DHCP-DNS-OMI`, entrar a **Services > HTTP**:
+
+1. Activar `HTTP: On`.
+2. Editar `index.html` con la pagina de servicios internos de la OMI.
+3. Guardar los cambios.
+
+La pagina debe abrir desde los clientes mediante:
+
+```text
+http://servicios.omi.local
+```
+
+## Servidor web Concurso
+
+El servidor externo `Concurso` utiliza:
+
+- IP: `200.1.1.50`
+- Servicio: HTTP
+- Nombre DNS: `concurso.omi.local`
+
+En el Server-PT `Concurso`, entrar a **Services > HTTP**:
+
+1. Activar `HTTP: On`.
+2. Editar y guardar `index.html` con la pagina oficial del concurso.
+
+La pagina debe abrir mediante:
+
+```text
+http://200.1.1.50
+http://concurso.omi.local
+```
+
+No se modificaron los pools DHCP al agregar estos servicios.

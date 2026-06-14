@@ -59,6 +59,9 @@ Si el servidor esta conectado a otro puerto, aplicar la configuracion de
   `13-patch-panels-y-colores.md`.
 - La guia consolidada de configuraciones de los equipos de interconexion vive
   en `14-configuraciones-completas-interconexion.md`.
+- El servidor interno publica `servicios.omi.local` y el servidor Concurso
+  publica `concurso.omi.local` en `200.1.1.50`; ambos servicios se documentan
+  en `05-servidor-DHCP-DNS.md`.
 - La matriz de validacion de `06-validacion.txt` incluye reservas, invitados
   CIT, Aula 12102 EIC, impresoras y pruebas negativas de aislamiento.
 
