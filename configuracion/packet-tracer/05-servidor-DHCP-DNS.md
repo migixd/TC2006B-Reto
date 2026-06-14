@@ -30,7 +30,6 @@ En **Services > DNS**, activar el servicio y agregar:
 
 | Nombre | Direccion |
 | --- | --- |
-| `dhcp-dns-omi.local` | `172.23.28.226` |
 | `servicios.omi.local` | `172.23.28.226` |
 | `concurso.omi.local` | `200.1.1.50` |
 
