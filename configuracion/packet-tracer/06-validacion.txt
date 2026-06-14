@@ -18,9 +18,45 @@ ping 10.32.100.1
 ! Ejecutar en SWDistribucionExternos
 show vlan brief
 show interfaces trunk
+show interfaces status
 
-! En cada PC: Desktop > IP Configuration > DHCP y luego Command Prompt
+! Ejecutar en DIST-ALUMNOS
+show cdp neighbors
+show interfaces status
+
+! En cada PC o laptop: Desktop > IP Configuration > DHCP y luego Command Prompt
 ipconfig /all
+ping <gateway-del-segmento>
 ping 172.23.28.226
 ping 200.1.1.1
 nslookup dhcp-dns-omi.local
+
+! Terminales de concursantes que deben documentarse
+! Sala de Congresos: PC-CIT-CONG-01 a PC-CIT-CONG-05
+! Reservas: PC-ALUMNOS-RESERVA-01 y PC-ALUMNOS-RESERVA-02
+! ENH: PC-ENH-1223, PC-ENH-1224 y PC-ENH-FIN
+! EIC: PC-EIC-12102
+! Gateway esperado: 172.23.24.1
+
+! Segmentos externos que deben documentarse
+! PC-EIC-JUEZ, gateway 172.23.28.1
+! PC-CIT-ENTRENADOR, gateway 172.23.28.65
+! PC-ENH-PRENSA, gateway 172.23.28.129
+! Laptop-ENH-INVITADO y Laptop/PC-INVITADO-CIT, gateway 172.23.26.1
+
+! Pruebas negativas de aislamiento
+! Desde Invitados, Entrenadores y Prensa:
+ping <IP-PC-CONCURSANTE>
+! Resultado esperado: falla por ACL BLOQUEAR-CONCURSANTES
+
+! Impresoras
+! Registrar direccion IP, mascara, gateway y segmento.
+! Si la impresora tiene Command Prompt:
+ping <gateway-del-segmento>
+ping 172.23.28.226
+! Si no tiene Command Prompt, hacer ping hacia la impresora desde una PC
+! perteneciente al mismo segmento.
+
+! Servidor DHCP-DNS-OMI
+! Confirmar 172.23.28.226/29, gateway 172.23.28.225
+ping 172.23.28.225

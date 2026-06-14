@@ -57,6 +57,10 @@ Si el servidor esta conectado a otro puerto, aplicar la configuracion de
   `12-matriz-cableado-fisico-completo.md`.
 - La integracion exacta de patch panels, wall mounts y colores vive en
   `13-patch-panels-y-colores.md`.
+- La guia consolidada de configuraciones de los equipos de interconexion vive
+  en `14-configuraciones-completas-interconexion.md`.
+- La matriz de validacion de `06-validacion.txt` incluye reservas, invitados
+  CIT, Aula 12102 EIC, impresoras y pruebas negativas de aislamiento.
 
 ## Nota visual
 
