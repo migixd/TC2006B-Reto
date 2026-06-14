@@ -6,8 +6,7 @@ Antes de pegar comandos, guardar una copia del archivo.
 ## Credenciales comunes solicitadas por la rúbrica
 
 Aplicar este bloque en **Alumnos**, **Frontera**, `DIST-ALUMNOS`,
-`SWDistribucionExternos` y cada switch de acceso. Este bloque se agrega para
-cumplir la rúbrica; verificarlo en Packet Tracer antes de entregar.
+`SWDistribucionExternos` y cada switch de acceso.
 
 ```cisco
 enable
